@@ -1,0 +1,10 @@
+<% var data = {
+  title: "Главная"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<%= _.template(require('./../includes/main-nav.html'))(data) %>
+
+<main class="index">
+</main>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

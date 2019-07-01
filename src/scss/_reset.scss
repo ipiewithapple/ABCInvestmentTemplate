@@ -1,0 +1,48 @@
+//reset standart
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  overflow-x: hidden;
+}
+
+main, body, div, section, aside, footer, header, input, button, li, ul {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: $anim;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  transition: $anim;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

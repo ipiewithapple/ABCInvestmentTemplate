@@ -1,0 +1,42 @@
+.main-nav {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-right: 40px;
+}
+
+.main-nav__list-item {
+  margin: 40px 0;
+}
+
+.main-nav__list-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: #f69f6f;
+  }
+}
+
+.main-nav__list-link--active {
+  &:before {
+    content: '';
+
+    position: absolute;
+    left: -50px;
+
+    display: block;
+    width: 36px;
+    height: 1px;
+
+    background-color: #f69f6f;
+  }
+}

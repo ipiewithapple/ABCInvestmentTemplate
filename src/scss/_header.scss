@@ -1,0 +1,151 @@
+.menu {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+}
+
+.menu__burger {
+  height: 102px;
+
+  border: none;
+  border-right: 1px solid #16169f;
+}
+
+.menu__item:hover .cls-1 {
+  fill: #040524;
+}
+
+.logo {
+  @include logo;
+
+  background: url("../img/Logo.png") no-repeat center center;
+
+  &:hover {
+    background: url("../img/Logo_hover.png") no-repeat center center;
+  }
+}
+
+.menu-logo {
+  @include logo;
+
+  background: url("../img/Logo_menu.png") no-repeat center center;
+  background-size: contain;
+
+  &:hover {
+    background: url("../img/Logo_menu_hover.png") no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.logo-vert {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 25px;
+
+  width: 54px;
+  height: 494px;
+
+  transform: translateY(-50%);
+}
+
+.menu-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+
+  background-color: rgba($color: #0e083f, $alpha: .8);
+}
+
+.menu-close {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+
+  background: none;
+  border: none;
+
+  &:hover #Close {
+    fill: #7F88FF;
+  }
+}
+
+
+.header__nav-list {
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin-top: 175px;
+  margin-left: 15%;
+}
+
+.header__nav-item {
+  position: relative;
+
+  display: flex;
+  margin: 10px 0;
+
+  &:hover::after{
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -63px;
+
+    display: block;
+    height: 2px;
+    width: 43px;
+
+    background-color: #ffffff;
+  }
+}
+
+.header__nav-link {
+  font-size: 35px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.menu-right{
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 317px;
+  height: 100vh;
+
+  background-color: #090524;
+}
+
+.menu-right__list{
+margin-top: 234px;
+}
+
+.menu-right__list-item{
+  margin: 13px 0;
+}
+
+.menu-right__list-link {
+  &:hover .social {
+    fill: #7F88FF;
+  }
+}
+.menu-right__address{
+  margin-bottom: 134px;
+
+  color: #605a86;
+}

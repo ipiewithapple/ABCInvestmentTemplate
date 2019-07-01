@@ -1,0 +1,13 @@
+.index {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+
+  background: url('../img/main-bg.jpg') no-repeat;  
+  background-size: cover;
+
+  &::before{
+    @include bg-cover;
+  }
+}

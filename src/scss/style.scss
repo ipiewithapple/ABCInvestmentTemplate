@@ -1,0 +1,61 @@
+//  vars
+
+$anim: 0.2s all ease-in;
+
+// mixins
+
+@mixin bg-cover {
+  content: '';
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+
+  background-color: #03010d;
+  opacity: .8;
+}
+
+@mixin logo {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+
+  width: 249px;
+  height: 149px;
+
+  transform: translateX(-50%);
+}
+
+// fonts
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// global
+
+body {
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 300;
+}
+
+// imports
+
+@import "reset";
+@import "header";
+@import "main-nav";
+@import "index";
