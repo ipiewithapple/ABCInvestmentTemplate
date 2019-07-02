@@ -3,16 +3,64 @@
   z-index: 10;
   display: flex;
 }
+.menu__item {
+  width: 100px;
+  height: 100px;
+  background-color: #0b0d3f;
+  transition: $anim;
+}
 
-.menu__burger {
-  height: 102px;
+.menu__item:hover {
+  background-color: #040524;
+}
 
+.login{
+  display: block;
+  width: 100px;
+  height: 100px;
+
+  background: url("../img/LogIn.png") no-repeat 45% center;
+}
+
+.menu__burger{
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+
+  background: none;
   border: none;
   border-right: 1px solid #16169f;
 }
 
-.menu__item:hover .cls-1 {
-  fill: #040524;
+.burger{
+  width: 25px;
+  height: 1px;
+  margin-top: -10px;
+
+  background-color: #ffffff;
+
+  &::after{
+    content: '';
+
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin-top: 10px;
+  
+    background-color: #ffffff;
+  }
+
+  &::before{
+    content: '';
+
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin-top: 10px;
+  
+    background-color: #ffffff;
+  }
 }
 
 .logo {
@@ -57,9 +105,17 @@
   left: 0;
   z-index: 100;
 
-  display: none;
+  display: block;
 
   background-color: rgba($color: #0e083f, $alpha: .8);
+
+  
+  transform: translateX(-100%);
+  transition: .5s all ease-in;
+}
+
+.menu-pageIn{
+  transform: translateX(0%);
 }
 
 .menu-close {
@@ -67,18 +123,40 @@
   top: 30px;
   left: 30px;
 
+  width: 40px;
+  height: 40px;
+
   background: none;
   border: none;
 
-  &:hover #Close {
-    fill: #7F88FF;
+  &:hover .close::after, &:hover .close {
+    background-color: #7F88FF;
+    transition: $anim;
   }
 }
 
+.close{
+  width: 40px;
+  height: 1px;
+
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  transition: $anim;
+
+  &::after{
+    content: '';
+
+    display: block;
+    width: 40px;
+    height: 1px;
+  
+    background-color: #ffffff;
+    transform: rotate(90deg);
+    transition: $anim;
+  }
+}
 
 .header__nav-list {
-
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +171,7 @@
   display: flex;
   margin: 10px 0;
 
-  &:hover::after{
+  &::after{
     content: '';
 
     position: absolute;
@@ -105,6 +183,12 @@
     height: 2px;
     width: 43px;
 
+    background-color: none;
+
+    transition: $anim;
+  }
+
+  &:hover::after{
     background-color: #ffffff;
   }
 }
@@ -115,7 +199,6 @@
   color: #ffffff;
   text-transform: uppercase;
 }
-
 .menu-right{
   position: fixed;
   top: 0;
@@ -140,8 +223,38 @@ margin-top: 234px;
 }
 
 .menu-right__list-link {
-  &:hover .social {
-    fill: #7F88FF;
+  display: block;
+  width: 20px;
+  height: 21px;
+
+  transition: none;
+}
+
+.vk{
+  background: url('../img/social.svg');
+  &:hover{
+    background: url('../img/social.svg') 19px 0;
+  }
+}
+
+.fb{
+  background: url('../img/social.svg') 0px -29px;
+  &:hover{
+    background: url('../img/social.svg') 19px -29px;
+  }
+}
+
+.inst{
+  background: url('../img/social.svg') 0px -61px;
+  &:hover{
+    background: url('../img/social.svg') 21px -61px;
+  }
+}
+
+.tw{
+  background: url('../img/social.svg') 0px -88px;
+  &:hover{
+    background: url('../img/social.svg') 23px -88px;
   }
 }
 .menu-right__address{

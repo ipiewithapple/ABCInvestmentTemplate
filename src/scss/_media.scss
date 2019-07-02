@@ -1,0 +1,25 @@
+@media (max-width: 1280px) {
+  .logo-vert {
+    height: 400px;
+
+    transform: translateY(-40%);
+  }
+
+  .header__nav-link {
+    font-size: 26px;
+  }
+
+  .header__nav-list {
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 10%;
+  }
+
+  .menu-right__list {
+    margin-top: 100px;
+  }
+
+  .menu-right__address {
+    margin-bottom: 70px;
+  }
+}
