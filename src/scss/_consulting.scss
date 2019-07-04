@@ -1,0 +1,86 @@
+.consulting {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+
+  background: url('../img/consulting-bg.jpg') no-repeat;
+  background-size: cover;
+
+  &::before {
+    @include bg-cover;
+  }
+}
+
+
+.consulting-wrap {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.consulting-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 65%;
+
+  text-align: center;
+}
+
+.consulting-item {
+
+  & h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background: rgba($color: #202178, $alpha: .7);
+
+    transition: $anim;
+    cursor: pointer;
+
+    &:hover {
+      background: #202178;
+    }
+  }
+
+  &:first-child h2 {
+    background: rgba($color: #282897, $alpha: .7);
+
+    &:hover {
+      background: #282897;
+    }
+  }
+
+  &:last-child h2 {
+    background: rgba($color: #111259, $alpha: .7);
+
+    &:hover {
+      background: #111259; 
+    }
+  }
+
+  & p {
+    position: relative;
+
+    display: none;
+    padding: 30px 35px 50px;
+
+    color: #ffffff;
+
+    background: rgba($color: #06072f, $alpha: 1.0);
+
+  }
+}

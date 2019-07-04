@@ -10492,6 +10492,18 @@ return jQuery;
   });
   $menuList.on('mouseleave', function () {
     $menuLink.css('opacity', '1');
+  }); // Accordion
+
+  $consTitle = $('.consulting-item h2');
+  $consDesc = $('.consulting-item  p');
+  $triangle = $('.consulting-item  p::before');
+  $consTitle.each(function (i) {
+    $(this).data('id', i);
+  });
+  $consTitle.on('click', function () {
+    $consDesc.not($(this).next()).slideUp('slow');
+    $(this).css('background', '');
+    $(this).siblings().slideToggle('slow');
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

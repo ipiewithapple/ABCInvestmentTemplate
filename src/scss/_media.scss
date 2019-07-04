@@ -22,4 +22,28 @@
   .menu-right__address {
     margin-bottom: 70px;
   }
+
+}
+
+@media (max-width: 1440px){
+  .consulting-list{
+    width: 55%;
+  }
+
+  .title{
+    font-size: 32px;
+    top: 20px;
+    right: 260px;
+  }
+}
+
+@media (max-height: 600px){
+  .consulting-wrap{
+    height: auto;
+    margin-top: 170px;
+  }
+
+  .consulting-list p{
+    padding: 10px;
+  }
 }
