@@ -84,3 +84,57 @@
 
   }
 }
+
+.consulting-item--active-1{
+  position: relative;
+
+  background-color: #282897 !important;
+
+  &::before{
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 50%;
+  z-index: 1;
+
+  transform: translateX(50%);
+  border: 10px solid transparent;
+  border-top: 10px solid #282897;
+  }
+}
+
+.consulting-item--active-2{
+  position: relative;
+
+  background-color: #202178 !important;
+
+  &::before{
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 50%;
+  z-index: 1;
+
+  transform: translateX(50%);
+  border: 10px solid transparent;
+  border-top: 10px solid #202178;
+  }
+}
+
+.consulting-item--active-3{
+  position: relative;
+
+  background-color: #111259 !important;
+
+  &::before{
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 50%;
+  z-index: 1;
+
+  transform: translateX(50%);
+  border: 10px solid transparent;
+  border-top: 10px solid #111259;
+  }
+}

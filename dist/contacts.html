@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Контакты</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <ul class="menu">
+        <li class="menu__item">
+          <button class="menu__burger">
+            <div class="burger"></div>
+          </button>
+        </li>
+        <li class="menu__item">
+          <a class="login" href="javascript:void(0)"></a>
+        </li>
+      </ul>
+      <div class="menu-page">
+        <button class="menu-close">
+          <div class="close"></div>
+        </button>
+        <a href="javascript:void(0)" class="menu-logo"></a>
+        <img class="logo-vert" src="../../img/Logo_vert.svg" alt="Логотип вертикальный">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная страница</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">О компании</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">Реализованные проекты</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">FAQ</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">Правила клуба</a></li>
+          <li class="header__nav-item"><a href="consulting.html" class="header__nav-link">Консалтинг</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">Стоимость услуг</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">Как принять участие</a></li>
+          <li class="header__nav-item"><a href="javascript:void(0)" class="header__nav-link">Контакты</a></li>
+        </ul>
+        <div class="menu-right">
+          <ul class="menu-right__list">
+            <li class="menu-right__list-item"><a href="javascript:void(0)" class="menu-right__list-link vk"></a>
+            </li>
+            <li class="menu-right__list-item"><a href="javascript:void(0)" class="menu-right__list-link fb"></a>
+            </li>
+            <li class="menu-right__list-item"><a href="javascript:void(0)" class="menu-right__list-link inst"></a>
+            </li>
+            <li class="menu-right__list-item"><a href="javascript:void(0)" class="menu-right__list-link tw"></a>
+            </li>
+          </ul>
+          <p class="menu-right__address">
+            Адрес:<br>
+            199106, Россия, г. Санкт-Петербург<br>
+            Большой проспект В.О.<br>
+            дом 80, литера А, б/ц Сенатор<br>
+            <br>
+            Т.: +7 (812) 493-44-84<br>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <a href="javascript:void(0)" class="logo"></a>
+    <img class="logo-vert" src="../../img/Logo_vert.svg" alt="Логотип вертикальный">
+
+  </header>
+
+<main class="contacts">
+  <div id="map"></div>
+  <section class="contacts-sect">
+    <h2 class="contacts-title">Наши контакты</h2>
+    <span class="contacts-desc">Спасибо за интерес к нашей компании</span>
+    <p class="contacts-addr">
+      199106, Россия, г. Санкт-Петербург<br>
+      Большой проспект В.О.<br>
+      дом 80, литера А<br>
+      б/ц Сенатор<br>
+    </p>
+    <span class="contacts-tel">+7 (812) 493-44-84</span>
+    <ul class="contacts-list">
+      <li class="contakts-list__item"><a href="" class="contacts-list__link vk"></a></li>
+      <li class="contakts-list__item"><a href="" class="contacts-list__link fb"></a></li>
+      <li class="contakts-list__item"><a href="" class="contacts-list__link inst"></a></li>
+      <li class="contakts-list__item"><a href="" class="contacts-list__link tw"></a></li>
+    </ul>
+    <form class="contacts-form">
+      <input name="name" type="text" class="form__name" placeholder="Ваше имя">
+      <input name="email" type="email" class="form__mail" placeholder="E-Mail">
+      <textarea name="message" id="" cols="30" rows="10" class="form__mess" placeholder="Сообщение"></textarea>
+      <button class="form__btn">Отправить<span class="form__btn-arrow"></span></button>
+    </form>
+  </section>
+</main>
+
+<script>
+  var map;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {
+        lat: 59.93599,
+        lng: 30.269908
+      },
+      zoom: 15,
+      disableDefaultUI: true,
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+      scrollwheel: false,
+      draggable: !("ontouchend" in document),
+      gestureHandling: 'cooperative',
+      styles: [{
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+              "saturation": 36
+            },
+            {
+              "color": "#000000"
+            },
+            {
+              "lightness": 40
+            }
+          ]
+        },
+        {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+              "visibility": "on"
+            },
+            {
+              "color": "#000000"
+            },
+            {
+              "lightness": 16
+            }
+          ]
+        },
+        {
+          "featureType": "all",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "color": "#2a304f"
+            },
+            {
+              "lightness": 20
+            }
+          ]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 17
+            },
+            {
+              "weight": 1.2
+            }
+          ]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#8e97b1"
+          }]
+        },
+        {
+          "featureType": "administrative.country",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{
+              "visibility": "on"
+            },
+            {
+              "hue": "#0026ff"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 20
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#21253c"
+          }]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 21
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#2a304f"
+          }]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#8e97b1"
+          }]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "color": "#262b4a"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "color": "#262b4a"
+            },
+            {
+              "lightness": 17
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 29
+            },
+            {
+              "weight": 0.2
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#8e97b1"
+          }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "all",
+          "stylers": [{
+              "saturation": "-100"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 18
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry.fill",
+          "stylers": [{
+              "color": "#262b4a"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "saturation": "-100"
+          }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text",
+          "stylers": [{
+              "hue": "#ff0000"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#8e97b1"
+          }]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 16
+            },
+            {
+              "saturation": "0"
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#262b4a"
+          }]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#000000"
+            },
+            {
+              "lightness": 19
+            },
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#262b4a"
+          }]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{
+              "color": "#0f252e"
+            },
+            {
+              "lightness": 17
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#191c2f"
+          }]
+        }
+      ]
+    });
+    var marker = new google.maps.Marker({
+      position: {
+        lat: 59.930054,
+        lng: 30.254091
+      },
+      map: map,
+      icon: 'img/mark.png'
+    });
+  };
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS7janQB3lLi6_l9RQjWT7WEdV302k6II&callback=initMap"
+  type="text/javascript"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

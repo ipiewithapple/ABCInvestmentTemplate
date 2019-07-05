@@ -23,6 +23,42 @@
     margin-bottom: 70px;
   }
 
+  .contacts-sect{
+    width: 450px;
+  }
+
+  .contacts-title{
+    margin-top: 20px;
+
+    font-size: 28px;
+  }
+
+  .contacts-addr{
+    margin-top: 20px;
+  }
+
+  .contacts-list{
+    margin-top: 20px;
+  }
+
+  .contacts-form{
+    margin-top: 20px;
+  }
+
+  .form__mess{
+    height: 60px;
+  }
+
+}
+
+@media (max-width: 1366px){
+  .contacts-addr{
+    margin-top: 20px;
+  }
+  
+  .form__mess{
+    height: 100px;
+  }
 }
 
 @media (max-width: 1440px){
