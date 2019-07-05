@@ -55,14 +55,24 @@
   .contacts-addr{
     margin-top: 20px;
   }
-  
+
+  .form__name, .form__mail{
+    margin-bottom: 10px;
+  }
+
   .form__mess{
     height: 100px;
+  }
+
+  .about-item{
+    & p{
+      max-height: 25vh;
+    }
   }
 }
 
 @media (max-width: 1440px){
-  .consulting-list{
+  .consulting-list, .about-list{
     width: 55%;
   }
 
@@ -74,7 +84,7 @@
 }
 
 @media (max-height: 600px){
-  .consulting-wrap{
+  .consulting-wrap, .about-wrap{
     height: auto;
     margin-top: 170px;
   }

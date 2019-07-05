@@ -32,9 +32,9 @@ $(document).ready(function () {
 
   // Accordion
 
-  $consTitle = $('.consulting-item h2');
-  $consDesc = $('.consulting-item  p');
-  $triangle = $('.consulting-item  p::before');
+  $consTitle = $('.consulting-item h2, .about-item h2');
+  $consDesc = $('.consulting-item  p, .about-item p');
+  $triangle = $('.consulting-item  p::before, .about-item  p::before');
 
   $consTitle.each(function (i) {
     $(this).data('id', i);
@@ -43,11 +43,11 @@ $(document).ready(function () {
   $consTitle.on('click', function () {
     $consTitle.not($(this)).attr('class', '');
     if($(this).data('id') == 0){
-      $(this).toggleClass('consulting-item--active-1');
+      $(this).toggleClass('consulting-item--active-1, about-item--active-1');
     }else if($(this).data('id') == 1){
-      $(this).toggleClass('consulting-item--active-2');
+      $(this).toggleClass('consulting-item--active-2, about-item--active-2');
     }else{
-      $(this).toggleClass('consulting-item--active-3');
+      $(this).toggleClass('consulting-item--active-3, about-item--active-3');
     }
     $consDesc.not($(this).next()).slideUp('slow');
     $(this).css('background', '');
