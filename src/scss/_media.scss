@@ -56,6 +56,10 @@
     margin-top: 20px;
   }
 
+  .faq-list {
+    max-height: 55vh;
+  }
+
   .form__name,
   .form__mail {
     margin-bottom: 10px;
@@ -75,7 +79,8 @@
 @media (max-width: 1440px) {
 
   .consulting-list,
-  .about-list {
+  .about-list,
+  .faq-list {
     width: 55%;
   }
 
@@ -95,7 +100,7 @@
 @media (max-height: 600px) {
 
   .consulting-wrap,
-  .about-wrap {
+  .about-wrap, .faq-wrap {
     height: auto;
     margin-top: 170px;
   }

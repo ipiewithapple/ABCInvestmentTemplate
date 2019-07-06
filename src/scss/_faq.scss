@@ -1,0 +1,116 @@
+.faq {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+
+  background: url('../img/faq-bg.jpg') no-repeat;
+  background-size: cover;
+
+  &::before {
+    @include bg-cover;
+  }
+}
+
+.faq-wrap {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.faq-list {
+  width: 65%;
+  max-height: 65vh;
+
+  overflow: auto;
+}
+
+.faq-item {
+  & h2 {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+
+    border: 1px solid #5b7aff;
+    box-sizing: border-box;
+    
+    cursor: pointer;
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+
+      display: flex;
+      width: 70px;
+      height: 70px;
+
+      background: url("../img/cross.svg") no-repeat center center;
+      border-right: 1px solid #5b7aff;
+
+      cursor: pointer;
+
+      transition: $anim;
+    }
+
+    &:hover::before {
+      background-color: rgba($color: #7d85ef, $alpha: .2);
+    }
+  }
+
+  &--open{
+    & h2::before{
+      background: url("../img/minus.svg") no-repeat center center;
+    }
+  }
+
+  & div {
+    display: none;
+    padding: 30px;
+    max-height: 60vh;
+
+    border: 1px solid #5b7aff;
+    border-top: none;
+
+  }
+
+  & span {
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  & p {
+    position: relative;
+
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 28px;
+    text-indent: 10px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: -5px;
+      top: 8px;
+
+      display: flex;
+      width: 7px;
+      height: 11px;
+
+      background: url("../img/la_faq.svg") no-repeat center center;
+    }
+  }
+}

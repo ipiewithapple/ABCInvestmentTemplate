@@ -15,7 +15,7 @@ $anim: 0.2s all ease-in;
   z-index: 2;
 
   background-color: #03010d;
-  opacity: .8;
+  opacity: .9 ;
 }
 
 @mixin logo {
@@ -82,4 +82,5 @@ body {
 @import "consulting";
 @import "contacts";
 @import "about";
+@import "faq";
 @import "media";

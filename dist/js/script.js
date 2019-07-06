@@ -10462,6 +10462,97 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./src/js/about.js":
+/*!*************************!*\
+  !*** ./src/js/about.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($, jQuery) {$(document).ready(function () {
+  // about accordion and scrolbar
+  $aboutTitle = $('.about-item h2');
+  $about = $('.about-item div');
+  $about.addClass('scrollbar-rail');
+  $aboutTitle.each(function (i) {
+    $(this).data('id', i);
+  });
+  $aboutTitle.on('click', function () {
+    $aboutTitle.not($(this)).attr('class', '');
+
+    if ($(this).data('id') == 0) {
+      $(this).toggleClass('about-item--active-1');
+    } else if ($(this).data('id') == 1) {
+      $(this).toggleClass('about-item--active-2');
+    } else {
+      $(this).toggleClass('about-item--active-3');
+    }
+
+    $('.scroll-wrapper').not($(this).siblings()).slideUp('slow');
+    $(this).css('background', '');
+    $(this).siblings().slideToggle('slow');
+  });
+  jQuery('.scrollbar-rail').scrollbar();
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/consulting.js":
+/*!******************************!*\
+  !*** ./src/js/consulting.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
+  // Consulting accordion
+  $consTitle = $('.consulting-item h2');
+  $consDesc = $('.consulting-item  p');
+  $consTitle.each(function (i) {
+    $(this).data('id', i);
+  });
+  $consTitle.on('click', function () {
+    $consTitle.not($(this)).attr('class', '');
+
+    if ($(this).data('id') == 0) {
+      $(this).toggleClass('consulting-item--active-1');
+    } else if ($(this).data('id') == 1) {
+      $(this).toggleClass('consulting-item--active-2');
+    } else {
+      $(this).toggleClass('consulting-item--active-3');
+    }
+
+    $consDesc.not($(this).next()).slideUp('slow');
+    $(this).css('background', '');
+    $(this).siblings().slideToggle('slow');
+  });
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/faq.js":
+/*!***********************!*\
+  !*** ./src/js/faq.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
+  $faqTitle = $('.faq-item h2');
+  $faqDiv = $('.faq-item div');
+  $faqTitle.on('click', function () {
+    $('.faq-item').not($(this).parent()).removeClass('faq-item--open');
+    $(this).parent().toggleClass('faq-item--open');
+    $faqDiv.not($(this).next()).slideUp('slow ');
+    $(this).next().slideToggle();
+  });
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -10471,10 +10562,19 @@ return jQuery;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script */ "./src/js/script.js");
-/* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_script__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _jquery_scrollbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jquery.scrollbar */ "./src/js/jquery.scrollbar.js");
-/* harmony import */ var _jquery_scrollbar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_jquery_scrollbar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _consulting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./consulting */ "./src/js/consulting.js");
+/* harmony import */ var _consulting__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_consulting__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about */ "./src/js/about.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_about__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./faq */ "./src/js/faq.js");
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_faq__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _jquery_scrollbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./jquery.scrollbar */ "./src/js/jquery.scrollbar.js");
+/* harmony import */ var _jquery_scrollbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_jquery_scrollbar__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 
@@ -10906,7 +11006,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
         if (o.autoScrollSize) {
           scrollx.scrollbarSize = parseInt(scrollSize * AreaVisible / AreaSize, 10);
-          scrollx.scroll.bar.css(cssSize, scrollx.scrollbarSize + 'px');
+          scrollx.scroll.bar.css(cssSize, '100px');
         }
 
         scrollx.scrollbarSize = scrollx.scroll.bar[cssFullSize]();
@@ -11215,14 +11315,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./src/js/script.js":
-/*!**************************!*\
-  !*** ./src/js/script.js ***!
-  \**************************/
+/***/ "./src/js/menu.js":
+/*!************************!*\
+  !*** ./src/js/menu.js ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($, jQuery) {$(document).ready(function () {
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
   // Menu show/hide
   $burger = $('.menu__burger');
   $close = $('.menu-close');
@@ -11245,53 +11345,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   });
   $menuList.on('mouseleave', function () {
     $menuLink.css('opacity', '1');
-  }); // Accordion
-
-  $consTitle = $('.consulting-item h2');
-  $consDesc = $('.consulting-item  p');
-  $consTitle.each(function (i) {
-    $(this).data('id', i);
   });
-  $consTitle.on('click', function () {
-    $consTitle.not($(this)).attr('class', '');
-
-    if ($(this).data('id') == 0) {
-      $(this).toggleClass('consulting-item--active-1');
-    } else if ($(this).data('id') == 1) {
-      $(this).toggleClass('consulting-item--active-2');
-    } else {
-      $(this).toggleClass('consulting-item--active-3');
-    }
-
-    $consDesc.not($(this).next()).slideUp('slow');
-    $(this).css('background', '');
-    $(this).siblings().slideToggle('slow');
-  }); // about accordion and scrolbar
-
-  $aboutTitle = $('.about-item h2');
-  $about = $('.about-item div');
-  $about.addClass('scrollbar-rail');
-  $aboutTitle.each(function (i) {
-    $(this).data('id', i);
-  });
-  $aboutTitle.on('click', function () {
-    $aboutTitle.not($(this)).attr('class', '');
-
-    if ($(this).data('id') == 0) {
-      $(this).toggleClass('about-item--active-1');
-    } else if ($(this).data('id') == 1) {
-      $(this).toggleClass('about-item--active-2');
-    } else {
-      $(this).toggleClass('about-item--active-3');
-    }
-
-    $('.scroll-wrapper').not($(this).siblings()).slideUp('slow');
-    $(this).css('background', '');
-    $(this).siblings().slideToggle('slow');
-  });
-  jQuery('.scrollbar-rail').scrollbar();
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

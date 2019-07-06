@@ -443,7 +443,7 @@
 
                 if (o.autoScrollSize) {
                     scrollx.scrollbarSize = parseInt(scrollSize * AreaVisible / AreaSize, 10);
-                    scrollx.scroll.bar.css(cssSize, scrollx.scrollbarSize + 'px');
+                    scrollx.scroll.bar.css(cssSize, '100px');
                 }
 
                 scrollx.scrollbarSize = scrollx.scroll.bar[cssFullSize]();
