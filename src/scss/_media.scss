@@ -23,73 +23,84 @@
     margin-bottom: 70px;
   }
 
-  .contacts-sect{
+  .contacts-sect {
     width: 450px;
   }
 
-  .contacts-title{
+  .contacts-title {
     margin-top: 20px;
 
     font-size: 28px;
   }
 
-  .contacts-addr{
+  .contacts-addr {
     margin-top: 20px;
   }
 
-  .contacts-list{
+  .contacts-list {
     margin-top: 20px;
   }
 
-  .contacts-form{
+  .contacts-form {
     margin-top: 20px;
   }
 
-  .form__mess{
+  .form__mess {
     height: 60px;
   }
 
 }
 
-@media (max-width: 1366px){
-  .contacts-addr{
+@media (max-width: 1366px) {
+  .contacts-addr {
     margin-top: 20px;
   }
 
-  .form__name, .form__mail{
+  .form__name,
+  .form__mail {
     margin-bottom: 10px;
   }
 
-  .form__mess{
+  .form__mess {
     height: 100px;
   }
 
-  .about-item{
-    & p{
+  .about-item {
+    & .scroll-content {
       max-height: 25vh;
     }
   }
 }
 
-@media (max-width: 1440px){
-  .consulting-list, .about-list{
+@media (max-width: 1440px) {
+
+  .consulting-list,
+  .about-list {
     width: 55%;
   }
 
-  .title{
+  .title {
     font-size: 32px;
     top: 20px;
     right: 260px;
   }
+
+  .about-item {
+    & .scroll-content {
+      max-height: 35vh;
+    }
+  }
 }
 
-@media (max-height: 600px){
-  .consulting-wrap, .about-wrap{
+@media (max-height: 600px) {
+
+  .consulting-wrap,
+  .about-wrap {
     height: auto;
     margin-top: 170px;
   }
 
-  .consulting-list p{
+  .consulting-list p {
     padding: 10px;
   }
 }

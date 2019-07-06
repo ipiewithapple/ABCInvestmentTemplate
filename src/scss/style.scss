@@ -45,6 +45,13 @@ $anim: 0.2s all ease-in;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: bold;
+}
+
 // global
 
 body {
@@ -68,6 +75,7 @@ body {
 // imports
 
 @import "reset";
+@import "scroll";
 @import "header";
 @import "main-nav";
 @import "index";

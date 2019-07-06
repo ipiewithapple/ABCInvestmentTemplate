@@ -74,17 +74,38 @@
   & p {
     position: relative;
 
-    display: none;
-    padding: 30px 35px 50px;
-    max-height: 35vh;
+    padding: 10px 35px;
 
     text-align: left;
     color: #ffffff;
+    text-indent: 15px;
 
     background: rgba($color: #06072f, $alpha: 1.0);
+  }
+
+  & span{
+    position: relative;
+
+    display: block;
+    padding: 10px 35px;
+
+    text-align: left;
+    font-weight: 700;
+    color: #ffffff;
+
+    background: rgba($color: #06072f, $alpha: 1.0);
+  }
+
+
+  & .scrollbar-rail{
+    display: none;
+    max-height: 45vh;
 
     overflow-y: scroll;
+  }
 
+  & .scroll-content{
+    display: block;
   }
 }
 
