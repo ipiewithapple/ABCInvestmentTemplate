@@ -93,12 +93,20 @@
     background-color: #06072f;
 }
 
+.faq-wrap>.scrollbar-rail>.scroll-element{
+    background: none;
+}
+
 .scrollbar-rail>.scroll-element div {
     display: block;
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
+}
+
+.faq-wrap>.scrollbar-rail>.scroll-element div {
+    left: 5px;
 }
 
 .scrollbar-rail>.scroll-element .scroll-element_size {
@@ -108,6 +116,15 @@
 
 .scrollbar-rail>.scroll-element .scroll-element_outer:hover .scroll-element_size {
     background-color: #3134bc;
+}
+
+.faq-wrap>.scrollbar-rail>.scroll-element .scroll-element_size {
+    background: none;
+
+}
+
+.faq-wrap>.scrollbar-rail>.scroll-element .scroll-element_outer:hover .scroll-element_size {
+    background: none;
 }
 
 .scrollbar-rail>.scroll-element.scroll-x {
