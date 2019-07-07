@@ -97,6 +97,10 @@
     background: none;
 }
 
+.join>.scrollbar-rail>.scroll-element{
+    background-color: rgba($color: #06072f, $alpha: .2);
+}
+
 .scrollbar-rail>.scroll-element div {
     display: block;
     height: 100%;
@@ -127,14 +131,23 @@
     background: none;
 }
 
-.scrollbar-rail>.scroll-element.scroll-x {
-    bottom: 0;
-    height: 12px;
-    left: 0;
-    min-width: 100%;
-    padding: 3px 0 2px;
-    width: 100%;
+.join>.scrollbar-rail>.scroll-element .scroll-element_size {
+    background: none;
+
 }
+
+.join>.scrollbar-rail>.scroll-element .scroll-element_outer:hover .scroll-element_size {
+    background: none;
+}
+
+// .scrollbar-rail>.scroll-element.scroll-x {
+//     bottom: 0;
+//     height: 12px;
+//     left: 0;
+//     min-width: 100%;
+//     padding: 3px 0 2px;
+//     width: 100%;
+// }
 
 .scrollbar-rail>.scroll-element.scroll-y {
     height: 100%;

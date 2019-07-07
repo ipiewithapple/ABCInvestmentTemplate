@@ -2,6 +2,9 @@
   position: relative;
   z-index: 1;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 
   background: url('../img/join-bg.jpg') no-repeat;
@@ -10,4 +13,142 @@
   &::before {
     @include bg-cover;
   }
+}
+
+.join-wrap {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65vh;
+  width: 65%;
+
+  background-color: rgba($color: #06072f, $alpha: .2);
+
+  & p {
+    align-self: flex-start;
+    padding: 20px;
+
+    &:nth-child(7) {
+      align-self: center;
+
+      text-align: center;
+    }
+
+    &:nth-child(10) {
+      align-self: center;
+
+      text-align: center;
+    }
+
+    &:nth-child(11) {
+      align-self: center;
+
+      text-align: center;
+    }
+  }
+
+  & div {
+    display: flex;
+  }
+
+  & ol {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+
+    list-style: none;
+    counter-reset: li;
+
+    &:first-child{
+      align-items: flex-start;
+    }
+
+    &:nth-child(8){
+      text-align: center;
+    }
+
+    &:nth-child(9){
+      text-align: center;
+    }
+
+    &:first-child::after {
+      content: "";
+
+      position: absolute;
+      right: -10px;
+
+      display: block;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: #383bd7;
+    }
+  }
+
+  & ol span {
+    margin-bottom: 10px;
+
+    align-self: center;
+  }
+
+  & li {
+    counter-increment: li;
+  }
+
+  & ol li::before {
+    content: counter(li) ".";
+
+    margin-right: 5px;
+
+    color: #686bff;
+  }
+
+  & ol span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.join-btn{
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  padding-left: 40px;
+  margin-top: 20px;
+
+  text-align: left;
+  color: #ffffff;
+
+  background: none;
+  border: 3px solid #efbb7d;
+  outline: none;
+
+  transition: $anim;
+
+  &:focus {
+    background: rgba($color: #f2b56c, $alpha: .2)
+  }
+}
+
+.join-btn__arrow {
+  display: block;
+  width: 24px;
+  height: 29px;
+  margin-left: 60px;
+
+  background: url("../img/left_arr.svg") no-repeat center center;
 }

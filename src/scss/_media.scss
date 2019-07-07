@@ -74,6 +74,17 @@
       max-height: 25vh;
     }
   }
+
+  .join-wrap{
+    width: 60%;
+    height: 60vh;
+
+    overflow-x: auto;
+  }
+
+  .join-btn{
+    bottom: 50px;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -95,6 +106,10 @@
       max-height: 35vh;
     }
   }
+
+  .join-wrap{
+    width: 60%;
+  }
 }
 
 @media (max-height: 600px) {
@@ -111,5 +126,21 @@
 
   .faq-item div{
     max-height: none;
+  }
+
+  .join{
+    align-items: flex-start;
+  }
+
+  .join-wrap{
+    height: auto;
+    width: 55%;
+    max-height: 65vh;
+    margin-top: 170px;
+  }
+
+  .join-btn{
+    right: 20px;
+    bottom: 20px;
   }
 }
