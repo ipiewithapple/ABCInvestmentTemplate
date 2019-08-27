@@ -13,12 +13,18 @@
   background-color: rgba($color: #0e083f, $alpha: .8);
 
 
-  transform: translateX(0%);
+  transform: translateY(-100%);
   transition: .5s all ease-in;
 }
 
 .tarifsIn {
-  transform: translateX(100%);
+  transform: translateY(0%);
+}
+
+.tarifs-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tarifs-title {
@@ -73,6 +79,12 @@
   }
 }
 
+.tarifs-table{
+  margin-top: 20px;
+
+  border-spacing: 0;
+}
+
 td {
   height: 80px;
   margin: 0;
@@ -88,30 +100,54 @@ td {
 .tc2,
 .tc6,
 .tc10 {
+  text-align: center;
+
   background-color: #e4e3df;
 }
 
 .tc4,
 .tc8 {
+  text-align: center;
+
   background-color: #fafafa;
 }
 
 .tc1{
+  padding-left: 40px;
+
+  font-weight: 700;
+
   background: url('../img/tbg1.png') no-repeat center center;
 }
 
 .tc3{
+  padding-left: 40px;
+
+  font-weight: 700;
+
   background: url('../img/tbg2.png') no-repeat center center;
 }
 
 .tc5{
+  padding-left: 40px;
+
+  font-weight: 700;
+
   background: url('../img/tbg3.png') no-repeat center center;
 }
 
 .tc7{
+  padding-left: 40px;
+
+  font-weight: 700;
+
   background: url('../img/tbg4.png') no-repeat center center;
 }
 
 .tc9{
+  padding-left: 40px;
+
+  font-weight: 700;
+
   background: url('../img/tbg5.png') no-repeat center center;
 }

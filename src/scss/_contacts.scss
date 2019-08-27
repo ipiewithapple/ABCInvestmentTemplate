@@ -22,6 +22,12 @@
   height: 100vh;
 
   background: rgba($color: #484d8b, $alpha: .7);
+
+  & div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contacts-title {

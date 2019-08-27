@@ -5,6 +5,7 @@ $(document).ready(function(){
  $consTitle = $('.consulting-item h2');
  $consDesc = $('.consulting-item  p');
 
+
  $consTitle.each(function (i) {
    $(this).data('id', i);
  });
