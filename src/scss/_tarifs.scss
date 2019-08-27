@@ -1,0 +1,117 @@
+.tarifs {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba($color: #0e083f, $alpha: .8);
+
+
+  transform: translateX(0%);
+  transition: .5s all ease-in;
+}
+
+.tarifsIn {
+  transform: translateX(100%);
+}
+
+.tarifs-title {
+  margin-bottom: 50px;
+
+  text-align: center;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.tarifs-desc {
+  text-align: center;
+  font-size: 14px;
+}
+
+.tarifs-close {
+  position: fixed;
+  top: 90px;
+  right: 90px;
+
+  width: 125px;
+  height: 125px;
+
+  background: none;
+  border: none;
+
+  &:hover .close-btn::after,
+  &:hover .close-btn {
+    background-color: #FFB29A;
+    transition: $anim;
+  }
+}
+
+.close-btn {
+  width: 125px;
+  height: 1px;
+
+  background-color: #b4b1ff;
+  transform: rotate(45deg);
+  transition: $anim;
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 125px;
+    height: 1px;
+
+    background-color: #b4b1ff;
+    transform: rotate(90deg);
+    transition: $anim;
+  }
+}
+
+td {
+  height: 80px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400; 
+  color: #444343;
+
+  border-spacing: 0;
+
+}
+
+.tc2,
+.tc6,
+.tc10 {
+  background-color: #e4e3df;
+}
+
+.tc4,
+.tc8 {
+  background-color: #fafafa;
+}
+
+.tc1{
+  background: url('../img/tbg1.png') no-repeat center center;
+}
+
+.tc3{
+  background: url('../img/tbg2.png') no-repeat center center;
+}
+
+.tc5{
+  background: url('../img/tbg3.png') no-repeat center center;
+}
+
+.tc7{
+  background: url('../img/tbg4.png') no-repeat center center;
+}
+
+.tc9{
+  background: url('../img/tbg5.png') no-repeat center center;
+}
